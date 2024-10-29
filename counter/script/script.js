@@ -1,27 +1,24 @@
-// JavaScript用ファイル
 new Vue({
     el: '#app',
-    data() {
-        return {
-            count: 1,
-            num: 0
-        };
+    data: {
+        num: 1,
+        count: 0
     },
     methods: {
         kakeru() {
-            this.count =  this.count *2;
+            this.count *= 2;
         },
         waru() {
-            this.count = this.count /2;
-        },
-        tasu() {
-            this.count = this.count + this.num;
-        },
-        hiku() {
-            this.count = this.count - this.num;
+            this.count /= 2;
         },
         reset() {
-            this.count = 1;
+            this.count = 0;
+        },
+        tasu() {
+            this.count += this.num;
+        },
+        hiku() {
+            this.count -= this.num;
         }
     }
 });
